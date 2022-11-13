@@ -17,6 +17,9 @@ Automatically handle meta tags in your Vue3 Router.
     - [Manually setting meta tags](#manually-setting-meta-tags)
     - [Updating the current locale](#updating-the-current-locale)
     - [Setting your own JSON schema](#setting-your-own-json-schema)
+    - [Set a custom title](#set-a-custom-title)
+    - [Set a custom description](#set-a-custom-description)
+    - [Set follow and index](#set-follow-and-index)
 
 ## Installation
 
@@ -158,4 +161,34 @@ const structuredData = {
 };
 
 updateOrCreateSchema(structuredData);
+```
+
+### Set a custom title
+
+You can set a custom title for the page using the `setTitle` function.
+
+```js
+import { setTitle } from "@m-media/vue3-meta-tags";
+
+setTitle("My custom title");
+```
+
+### Set a custom description
+
+You can set a custom description for the page using the `setDescription` function.
+
+```js
+import { setDescription } from "@m-media/vue3-meta-tags";
+
+setDescription("My custom description");
+```
+
+### Set follow and index
+
+You can set the `robots` meta tag using the `setFollowAndIndex` function.
+
+```js
+import { setFollow } from "@m-media/vue3-meta-tags";
+
+setFollow(true);
 ```
