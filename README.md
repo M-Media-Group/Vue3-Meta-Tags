@@ -21,6 +21,26 @@ app.use(metaTagPlugin, {}, router);
 
 The third parameter is the router instance. The second parameter is an optional configuration object.
 
+The package will automatically set some defaults on every page, but you can set your own meta attributes in a route too:
+
+```js
+{
+      path: "/",
+      name: "home",
+      meta: {
+        title: "Home",
+        description: "This is the home page",
+        image: "https://example.com/image.png",
+        locale: "en_US",
+        metaTags:
+          {
+            "og:title": "Home",
+          },
+      },
+      component: Home,
+},
+```
+
 ### Configuration
 
 The full configuration object that can be passed looks like this:
