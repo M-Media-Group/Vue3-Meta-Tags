@@ -21,7 +21,7 @@ Automatically handle meta tags in your Vue3 Router.
 ## Installation
 
 ```bash
-npm install vue3-router-meta-tags
+npm i @m-media/vue3-meta-tags
 ```
 
 ## Usage
