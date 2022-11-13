@@ -31,7 +31,13 @@ First, import the plugin and install it in your Vue app:
 // main.js
 import { metaTagPlugin } from "@m-media/vue3-meta-tags";
 
-app.use(metaTagPlugin, {}, router);
+app.use(
+  metaTagPlugin,
+  {
+    /* optional configuration here */
+  },
+  router
+);
 ```
 
 The third parameter is the router instance. The second parameter is an optional configuration object.
@@ -50,6 +56,7 @@ The package will automatically set some defaults on every page, but you can set 
         metaTags:
           {
             "og:title": "Home",
+            ... // other meta tags
           },
       },
       component: Home,
@@ -78,11 +85,11 @@ app.use(
 
 #### defaultName
 
-The default name of your app. This will be used if no name/title is specified in the meta tags.
+The default name of your app. This will be used if no name/title is specified in the meta tags, and also for some tags like `og:site_name`.
 
 #### defaultLocale
 
-The default locale of your app. This sets the `lang` attribute of the `html` tag, as well as some other tags like `og:locale`.
+The default locale of your app. This sets the `lang` attribute of the `html` tag, as well as some other tags like `og:locale`. If the set locale is a right-to-left language, the `dir` attribute of the `html` tag will be set to `rtl`, otherwise its set to `ltr`.
 
 #### locales
 
