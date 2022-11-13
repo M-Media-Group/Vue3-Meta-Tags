@@ -16,6 +16,7 @@ Automatically handle meta tags in your Vue3 Router.
       - [textCallback](#textcallback)
     - [Manually setting meta tags](#manually-setting-meta-tags)
     - [Updating the current locale](#updating-the-current-locale)
+    - [Setting your own JSON schema](#setting-your-own-json-schema)
 
 ## Installation
 
@@ -123,4 +124,38 @@ setMetaAttributes(to, from);
 import { setLocaleToUse } from "@m-media/vue3-meta-tags";
 
 setLocaleToUse("en");
+```
+
+### Setting your own JSON schema
+
+You can set your own JSON schema for the page using the `jsonSchema` function.
+
+```js
+import { updateOrCreateSchema } from "@m-media/vue3-meta-tags";
+
+const structuredData = {
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  name: Maps.map.value?.title ?? "Untitled map",
+  description: Maps.map.value?.description,
+  url: window.location.href,
+  license: "https://creativecommons.org/publicdomain/zero/1.0/",
+  isAccessibleForFree: true,
+  creator: {
+    "@type": "Organization",
+    url: "https://app.cartes.io/",
+    name: "Cartes.io",
+  },
+  distribution: [
+    {
+      "@type": "DataDownload",
+      encodingFormat: "JSON",
+      contentUrl:
+        import.meta.env.VITE_API_URL + "/api/maps/" + Maps.map.value?.uuid,
+    },
+  ],
+  temporalCoverage: Maps.map.value?.created_at + "/..",
+};
+
+updateOrCreateSchema(structuredData);
 ```

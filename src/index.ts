@@ -1,2 +1,2 @@
-import {  metaTagPlugin, setLocaleToUse, setMetaAttributes } from './metaTagger';
-export { metaTagPlugin, setLocaleToUse, setMetaAttributes };
+import {  metaTagPlugin, setLocaleToUse, setMetaAttributes, updateOrCreateSchema } from './metaTagger';
+export { metaTagPlugin, setLocaleToUse, setMetaAttributes, updateOrCreateSchema };
