@@ -252,7 +252,7 @@ export const setText = (text: string) => {
 
 export const setupMetaTagsHandler = (router: Router) => {
   router.afterEach((to, from, failure) => {
-    if (!failure) {
+    if (!failure && !to.meta.skipMetaTagsHandler) {
       setMetaAttributes(to, from);
     }
   });

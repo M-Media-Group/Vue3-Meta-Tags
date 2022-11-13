@@ -1,6 +1,6 @@
 {
   "name": "@m-media/vue3-meta-tags",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Add support for meta tags in your Vue3 Router",
   "main": "src/index.js",
   "scripts": {

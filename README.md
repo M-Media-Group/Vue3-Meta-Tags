@@ -20,6 +20,7 @@ Automatically handle meta tags in your Vue3 Router.
     - [Set a custom title](#set-a-custom-title)
     - [Set a custom description](#set-a-custom-description)
     - [Set follow and index](#set-follow-and-index)
+    - [Skipping auto meta tag resolution](#skipping-auto-meta-tag-resolution)
 
 ## Installation
 
@@ -192,3 +193,20 @@ import { setFollow } from "@m-media/vue3-meta-tags";
 
 setFollow(true);
 ```
+
+### Skipping auto meta tag resolution
+
+You can skip the auto meta tag resolution by setting the `skipAutoMetaTagResolution` meta tag to `true`:
+
+```js
+{
+      path: "/",
+      name: "home",
+      meta: {
+        skipMetaTagsHandler: true,
+      },
+      component: Home,
+},
+```
+
+You should then manually set the meta tags using the `setMetaAttributes` function.
