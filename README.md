@@ -2,6 +2,21 @@
 
 Automatically handle meta tags in your Vue3 Router.
 
+## Table of Contents
+
+- [Vue3 Router Meta Tags](#vue3-router-meta-tags)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Configuration](#configuration)
+      - [defaultName](#defaultname)
+      - [defaultLocale](#defaultlocale)
+      - [locales](#locales)
+      - [preconnect](#preconnect)
+      - [textCallback](#textcallback)
+    - [Manually setting meta tags](#manually-setting-meta-tags)
+    - [Updating the current locale](#updating-the-current-locale)
+
 ## Installation
 
 ```bash
