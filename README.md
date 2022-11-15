@@ -174,6 +174,8 @@ import { setTitle } from "@m-media/vue3-meta-tags";
 setTitle("My custom title");
 ```
 
+Note that this function does not run through the `textCallback` function, so you should translate the text yourself.
+
 ### Set a custom description
 
 You can set a custom description for the page using the `setDescription` function.
@@ -183,6 +185,8 @@ import { setDescription } from "@m-media/vue3-meta-tags";
 
 setDescription("My custom description");
 ```
+
+Note that this function does not run through the `textCallback` function, so you should translate the text yourself.
 
 ### Set follow and index
 
