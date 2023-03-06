@@ -200,7 +200,7 @@ setFollow(true);
 
 ### Skipping auto meta tag resolution
 
-You can skip the auto meta tag resolution by setting the `skipAutoMetaTagResolution` meta tag to `true`:
+You can skip the auto meta tag resolution by setting the `skipMetaTagsHandler` meta tag to `true`:
 
 ```js
 {
