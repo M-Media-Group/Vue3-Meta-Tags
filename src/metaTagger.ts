@@ -153,7 +153,7 @@ export const updateOrCreateMetaTag = (
   tagName: string,
   content: string,
   type = "meta",
-  tagNameSelector = "name",
+  tagNameSelector = "property",
   contentSelector = "content",
   additionalAttributes = [] as { name: string; value: string }[]
 ) => {
