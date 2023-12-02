@@ -37,6 +37,7 @@ export const setMetaAttributes = (
 
   if (typeof to.meta.image === "string") {
     updateOrCreateMetaTag("og:image", to.meta.image, "meta", "property");
+    updateOrCreateMetaTag("twitter:image", to.meta.image);
   }
 
   updateOrCreateMetaTag("og:site_name", defaultName);
@@ -83,7 +84,7 @@ export const setMetaAttributes = (
   } else if (typeof to.name === "string") {
     setTitle(
       setText(to.name) + " - " + defaultName ??
-        defaultName
+      defaultName
     );
   } else {
     setTitle(defaultName);
@@ -273,7 +274,7 @@ export const metaTagPlugin = {
       locales = options.locales;
     }
     if (options.defaultName) {
-        defaultName = options.defaultName;
+      defaultName = options.defaultName;
     }
     setupMetaTagsHandler(router);
   },
