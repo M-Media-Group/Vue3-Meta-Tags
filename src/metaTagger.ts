@@ -36,7 +36,7 @@ export const setMetaAttributes = (
   }
 
   if (typeof to.meta.image === "string") {
-    updateOrCreateMetaTag("og:image", to.meta.image);
+    updateOrCreateMetaTag("og:image", to.meta.image, "meta", "property");
   }
 
   updateOrCreateMetaTag("og:site_name", defaultName);
@@ -122,7 +122,7 @@ export const setLocaleToUse = (locale: string) => {
 
 export const setTitle = (title: string) => {
   document.title = title;
-  updateOrCreateMetaTag("og:title", title);
+  updateOrCreateMetaTag("og:title", title, "meta", "property");
   updateOrCreateMetaTag("twitter:title", title);
 };
 
@@ -136,7 +136,7 @@ export const setFollow = (follow = true) => {
 
 export const setDescription = (description: string) => {
   updateOrCreateMetaTag("description", description);
-  updateOrCreateMetaTag("og:description", description);
+  updateOrCreateMetaTag("og:description", description, "meta", "property");
   updateOrCreateMetaTag("twitter:description", description);
 };
 
@@ -205,7 +205,7 @@ export const updateOrCreateSchema = (json = null as null | Object) => {
 };
 
 export const setLocale = (locale: string) => {
-  updateOrCreateMetaTag("og:locale", locale);
+  updateOrCreateMetaTag("og:locale", locale, "meta", "property");
   document.documentElement.lang = locale;
   document.documentElement.dir = RTL_LOCALES.includes(locale) ? "rtl" : "ltr";
 };
