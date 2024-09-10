@@ -83,8 +83,7 @@ export const setMetaAttributes = (
     setTitle(setText(previousNearestWithMeta.meta.title));
   } else if (typeof to.name === "string") {
     setTitle(
-      setText(to.name) + " - " + defaultName ??
-      defaultName
+      setText(to.name) + " - " + defaultName
     );
   } else {
     setTitle(defaultName);
